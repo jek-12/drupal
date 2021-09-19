@@ -5,25 +5,6 @@
     @return 'Roboto Condensed', sans-serif;
   }
 }
-@mixin size($w, $h: false) {
-  @if $w {
-    width: $w;
-    height: $w;
-  } @else {
-    width: $w;
-    height: $h;
-  }
-}
-@mixin text_settings ($num, $color, $size, $l-height, $l-space: normal) {
-  span {
-    &:nth-child(#{$num}) {
-      color: $color;
-      font-size: $size;
-      line-height: $l_height;
-      letter-spacing: $l-space;
-    }
-  }
-}
 
 .active {
   box-shadow: 0 7px 0 0 #2e9ad0;
@@ -59,6 +40,7 @@ body {
   position: fixed;
   width: 100%;
   top: 39px; //del prod
+  z-index: 3000;
   max-width: 1250px;
   height: 115px;
   padding-top: 0;
