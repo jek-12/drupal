@@ -1,0 +1,16 @@
+@mixin button ($class, $width, $height, $bckg, $text_color) {
+  .#{$class} {
+    width: $width;
+    height: $height;
+    background-color: $bckg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: $text_color;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+  }
+}

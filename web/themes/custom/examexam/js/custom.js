@@ -25,12 +25,11 @@
         let currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
           $("#navbar-main").css("top", "39px");
-          // $("#block-examexam-search").css("display", "block");
-          $("#block-examexam-search").css("top", "-80px");
+          // $("#block-examexam-search").css("top", "-80px");
         }
         else {
           $("#navbar-main").css("top", "-200px");
-          $("#block-examexam-search").css("top", "-280px");
+          // $("#block-examexam-search").css("top", "-280px");
           $("#CollapsingNavbar").removeClass("show");
           $("#block-examexam-search").removeClass("check");
           $("#block-sociallinksheader").removeClass("check");

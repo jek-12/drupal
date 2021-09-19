@@ -1,5 +1,7 @@
 /* IMPORTS */
-
+* {
+  //outline: 10px solid #00c851;
+}
 //@import url(font-awesome.min.css);
 // variables
 @import "variables";
@@ -14,3 +16,5 @@
 // barrio
 @import "barrio";
 @import "custom_styles/header";
+@import "custom_styles/About";
+@import "custom_styles/Services";

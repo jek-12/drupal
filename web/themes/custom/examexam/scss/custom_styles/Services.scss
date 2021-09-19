@@ -1,0 +1,32 @@
+#block-views-block-services-block-1 {
+  h2 {
+    width: min-content;
+    margin: -20px auto 100px auto;
+  }
+  #line {
+    display: flex;
+    justify-content: space-between;
+    &::after, &::before {
+      display: block;
+      content: "";
+      width: 43%;
+      height: 1px;
+      background-color: black;
+    }
+  }
+}
+//#block-examexam-page-title {
+//  display: flex;
+//  justify-content: space-between;
+//  &::after, &::before {
+//    display: block;
+//    content: "";
+//    width: 43%;
+//    height: 1px;
+//    background-color: black;
+//  }
+//}
+
+#main {
+  max-width: 1275px;
+}

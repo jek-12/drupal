@@ -163,7 +163,7 @@ header {
     margin-top: 50px;
   }
   #block-slogan {
-    width: 375px;
+    max-width: 375px;
     @include text_settings(1, #ffffff, 70px, 55px, -2.5px);
     @include text_settings(3, #373645, 40px, 46px);
     @include text_settings(5, #7ea5cb, 14px, 15px);
