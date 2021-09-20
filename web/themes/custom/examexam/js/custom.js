@@ -44,7 +44,7 @@
       // change underlined elements
       for (let i = 0; i < ul_items.length; i++) {
         if ($(ul_items[i]).attr("href") === window.location.pathname) {
-          $(ul_items[i]).addClass("active");
+          $(ul_items[i]).addClass("active_item");
           $(ul_items[i]).css("color", "#010111");
           $("#default_active").removeClass("active1");
           $("#default_active span").css("color", "#38383e");
