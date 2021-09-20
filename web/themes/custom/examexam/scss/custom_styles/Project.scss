@@ -3,7 +3,11 @@
 }
 @use "sass:map";
 #block-views-block-projects2-block-1 {
+  padding-bottom: 108px;
   @include line();
+  li[role=presentation] {
+    display: none;
+  }
   #line {
     margin-top: -35px;
   }
@@ -51,6 +55,12 @@
   .view-content + nav {
     width: min-content;
     margin: 45px auto;
+    a {
+      color: #646464;
+    }
+    span {
+      color: #646464;
+    }
     .page-link {
       background-color: unset;
       border: unset;
@@ -59,7 +69,7 @@
       border-radius: 100%;
       background: #dddcdd;
       .page-link {
-        color: #6b6b6b;
+        color: #191818;
       }
     }
   }
