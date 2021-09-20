@@ -1,10 +1,16 @@
 .featured-bottom {
-  background: repeating-linear-gradient( -45deg, #dbdbdb, #ffffff 1px, #ffffff 1px, #dbdbdb 5px );
+  #bckg:first-child {
+      background: repeating-linear-gradient( -45deg, #dbdbdb, #ffffff 1px, #ffffff 1px, #dbdbdb 5px );
+  }
 }
 @use "sass:map";
 #block-views-block-projects2-block-1 {
   padding-bottom: 108px;
   @include line();
+  .content {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
   li[role=presentation] {
     display: none;
   }
@@ -26,10 +32,10 @@
       }
     }
     &:nth-child(1) {
-      padding-bottom: 20px;
+      padding-bottom: 1rem;
     }
     &:nth-child(2) {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     &:nth-child(3) {
       padding-bottom: 17px;
