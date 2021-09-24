@@ -1,0 +1,41 @@
+.featured-bottom + .site-footer {
+  background: #ffffff !important;
+}
+footer {
+  #bckg {
+    margin: 0 auto;
+  }
+}
+.slick-initialized {
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+}
+#block-views-block-1-block-1 {
+  padding: 1.6875rem 0 10.35rem 0;
+  @include line();
+  h2 {
+    margin: -1.25rem auto 3.7rem auto;
+  }
+  .slick {
+    width: 1250px;
+    margin: 0 auto;
+  }
+  .slick-track {
+    display: flex;
+
+    align-items: center;
+  }
+}
+@include line-responsive(#block-views-block-1-block-1);
+.region-footer-second {
+  background: #373645;
+}
+@include logo(#block-header-logo-2, #block-sociallinksheader-2);
+@media (max-width: 830px) {
+  #block-views-block-1-block-1 {
+    padding: 1.688rem 0 3.35rem 0;
+  }
+}
+

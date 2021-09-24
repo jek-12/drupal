@@ -21,11 +21,16 @@
     top: 64px;
   }
 }
-body {
-  background: aliceblue !important;
-}
+//body {
+//  background: aliceblue !important;
+//}
 .check {
   display: block !important;
+}
+.region-primary-menu {
+  #bckg {
+    margin: 0 auto;
+  }
 }
 #header {
   background-image: url("../images/proj/header.png");
@@ -34,9 +39,6 @@ body {
   height: 700px;
   display: flex;
   justify-content: center;
-  #bckg {
-    margin: 0 auto;
-  }
 }
 #navbar-main {
   position: fixed;
@@ -79,37 +81,7 @@ body {
     background-color: #0079C0;
   }
 }
-#block-header-logo {
-  background-color: #373645;
-  @include size(240px, 100%);
-  width: 240px;
-  height: 100%;
-  padding: 28px 0 0 39px;
-  h3 {
-    font-family: fontik(true);
-    text-transform: none;
-    color: #6e9bca;
-    letter-spacing: 2px;
-    font-size: 30px;
-    margin: 0;
-  }
-  h6 {
-    font-family: fontik(true);
-    color: #cac9cd;
-  }
-}
-#block-sociallinksheader {
-  width: 98px;
-  padding: 0;
-  order: 5;
-  ul {
-    display: flex;
-    justify-content: space-between;
-    font-size: 29px;
-    margin: 0;
-    padding: 0;
-  }
-}
+@include logo(#block-header-logo, #block-sociallinksheader);
 .navbar-collapse {
   -webkit-flex-grow: unset;
   flex-grow: unset;

@@ -52,6 +52,39 @@
     }
   }
 }
+@mixin logo ($id1, $id2) {
+  #{$id1} {
+    background-color: #373645;
+    @include size(240px, 100%);
+    width: 240px;
+    height: 100%;
+    padding: 28px 0 0 39px;
+    h3 {
+      font-family: fontik(true);
+      text-transform: none;
+      color: #6e9bca;
+      letter-spacing: 2px;
+      font-size: 30px;
+      margin: 0;
+    }
+    h6 {
+      font-family: fontik(true);
+      color: #cac9cd;
+    }
+  }
+  #{$id2} {
+    width: 98px;
+    padding: 0;
+    order: 5;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      font-size: 29px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
 @mixin line () {
   h2 {
     width: min-content;

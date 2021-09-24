@@ -51,4 +51,9 @@
 }
 @include adaptive_cards(#block-views-block-our-team-block-1);
 @include line-responsive(#block-views-block-our-team-block-1);
+@media (max-width: 830px) {
+  #block-views-block-our-team-block-1 {
+    margin-bottom: 8rem;
+  }
+}
 

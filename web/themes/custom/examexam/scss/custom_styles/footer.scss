@@ -1,0 +1,35 @@
+.region-footer-second {
+  #bckg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1420px;
+    height: 196px;
+    padding: 20px 50px;
+    flex-wrap: nowrap;
+    & > div {
+      height: min-content;
+    }
+  }
+  #block-header-logo-2 {
+    padding: 0;
+    width: min-content;
+  }
+}
+.site-footer {
+  padding: 1rem 0 0 0;
+}
+@media (max-width: 830px) {
+  .region-footer-second {
+    #bckg {
+      height: 126px;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .region-footer-second {
+    #bckg {
+      flex-direction: column;
+    }
+  }
+}

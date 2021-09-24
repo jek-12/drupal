@@ -12,6 +12,17 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },{
+            "type": "package",
+            "package":{
+                "name":"kenwheeler/slick",
+                "version": "1.8.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url":"https://github.com/kenwheeler/slick/archive/refs/tags/1.8.0.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],
     "require": {
@@ -22,12 +33,20 @@
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
+        "drupal/devel": "^4.1",
         "drupal/flag": "^4.0@beta",
         "drupal/fontawesome": "^2.19",
         "drupal/link_icons": "^3.0",
+        "drupal/simple_gmap": "^3.0",
+        "drupal/slick": "^2.3",
+        "drupal/slick_views": "^2.4",
         "drupal/social_link_field": "^1.1@alpha",
         "drupal/svg_image": "^1.15",
-        "drush/drush": "^10.2"
+        "drupal/views_field_view": "^1.0@beta",
+        "drupal/views_fieldsets": "^3.4",
+        "drupal/webform": "^6.0",
+        "drush/drush": "^10.2",
+        "kenwheeler/slick": "^1.8"
     },
     "conflict": {
         "drupal/drupal": "*"
