@@ -1,12 +1,15 @@
+@include wrap(2);
 #block-views-block-our-team-block-1 {
+  @include line();
+  margin-bottom: 14.3rem;
   .content {
     max-width: 1280px;
     margin: 0 auto;
   }
-  @include line();
   h2 {
     width: 140px;
     margin: -1.25rem auto 2rem auto;
+    text-align: center;
   }
   #line {
     padding-top: 109px;
@@ -28,15 +31,24 @@
       font-size: 13px;
       margin-top: -6px;
       padding-bottom: 14px;
+      a {
+        color: #a4a2a2;
+      }
+    }
+    &:nth-child(5) {
+      font-size: 29px;
+      position: relative;
+      left: -54px;
+      top: 12px;
+    }
+    &:nth-child(6) {
+    position: relative;
+    top: -22px;
+    left: 83px;
     }
   }
   @include button(team-link, 100px, 30px, black, #ffffff);
 }
+@include adaptive_cards(#block-views-block-our-team-block-1);
 @include line-responsive(#block-views-block-our-team-block-1);
-@media (max-width: 630px) {
-#block-views-block-our-team-block-1 {
-    .views-col {
-      width: 100%;
-    }
-  }
-}
+

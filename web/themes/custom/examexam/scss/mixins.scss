@@ -19,6 +19,22 @@
   }
 }
 //
+@mixin wrap ($nth: false, $background: false) {
+  .featured-bottom {
+    section {
+      justify-content: center;
+    }
+  }
+  @if $background {
+    .featured-bottom {
+      section:nth-child(#{$nth}) {
+        #bckg {
+          background: repeating-linear-gradient( -45deg, #dbdbdb, #ffffff 1px, #ffffff 1px, #dbdbdb 5px );
+        }
+      }
+    }
+  }
+}
 @mixin button ($class, $width, $height, $bckg, $text_color) {
   .#{$class} {
     width: $width;
@@ -84,4 +100,19 @@
     }
   }
 }
-
+@mixin adaptive_cards($parent-id) {
+  @media (max-width: 1290px) {
+    #{$parent-id} {
+      .views-col {
+        width: 50%;
+      }
+    }
+  }
+  @media (max-width: 670px) {
+    #{$parent-id} {
+      .views-col {
+        width: 100%;
+      }
+    }
+  }
+}

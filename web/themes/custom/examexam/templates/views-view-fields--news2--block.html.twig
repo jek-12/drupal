@@ -1,0 +1,47 @@
+{#{{ created }} == Content: Authored on#}
+{#{{ created_1 }} == Content: Authored on#}
+{#{{ created_2 }} == Content: Authored on#}
+{#{{ user_picture }} == User: Picture#}
+{#{{ roles_target_id }} == User: Roles#}
+{#{{ name }} == User: Name#}
+{#{{ field_news_ }} == Content: news-term#}
+{#{{ created_3 }} == Content: Authored on#}
+{#{{ field_title_for_news_content }} == Content: Title for news content#}
+{#{{ body }} == Content: Body#}
+{#{{ view_node }} == Content: Link to Content#}
+
+
+<div class = "top_news_card">
+  <div class = "date_group_news col-1">
+    <div class = "news-month">{{ fields.created.content }} </div>
+    <div class = "news-day"><h2> {{ fields.created_1.content }} </h2> </div>
+    <div class = "news-year">{{ fields.created_2.content }} </div>
+  </div>
+  <div class = "teammates_description col-11">
+    <div class = "wrapper">
+      <div class = "party">
+        <div class = "news-picture">{{ fields.user_picture.content }} </div>
+        <div class = "group">
+          <div class = "news-role">{{ fields.roles_target_id.content }} </div>
+          <div class = "news-name">{{ fields.name.content }} / </div>
+          <div class = "news-term-position">{{ fields.field_news_.content }} </div>
+        </div>
+      </div>
+      <div class = "news-time-ago">{{ fields.created_3.content }} </div>
+    </div>
+  </div>
+</div>
+<div class = "bot_news_card">
+  <div class = "col-1">
+  </div>
+  <div class = "col-11">
+    <div class = "desc">{{ fields.field_title_for_news_content.content }} </div>
+    <div class = "news-content">{{ fields.body.content }} </div>
+    <div class = "news-link">{{ fields.view_node.content }} </div>
+  </div>
+</div>
+
+
+
+
+

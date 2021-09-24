@@ -3,12 +3,13 @@
  * Global utilities.
  *
  */
-(function($, Drupal) {
+(function($, Drupal, drupalSettings) {
 
   'use strict';
 
   Drupal.behaviors.examexam = {
     attach: function (context, settings) {
+
       // Custom code here
 
       // adaptive changes the class to hide the items (links & search-bar)
@@ -25,11 +26,9 @@
         let currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
           $("#navbar-main").css("top", "39px");
-          // $("#block-examexam-search").css("top", "-80px");
         }
         else {
           $("#navbar-main").css("top", "-200px");
-          // $("#block-examexam-search").css("top", "-280px");
           $("#CollapsingNavbar").removeClass("show");
           $("#block-examexam-search").removeClass("check");
           $("#block-sociallinksheader").removeClass("check");
@@ -55,4 +54,4 @@
       }
     }
   }
-})(jQuery, Drupal);
+})(jQuery, Drupal, drupalSettings);

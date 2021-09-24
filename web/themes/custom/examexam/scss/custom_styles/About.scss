@@ -1,6 +1,8 @@
-.featured-top {
-  aside {
-    max-width: 1274px;
+.region-featured-top {
+  max-width: 1295px;
+  margin: 0 auto;
+  #bckg {
+    padding: 0 0 0 23px;
   }
 }
 .highlighted {
@@ -53,7 +55,7 @@
   }
   @include button(about-link, 115px, 30px, #6e9bca, white);
 }
-@media (max-width: 1250px) {
+@media (max-width: 1295px) {
   #block-views-block-about-block-1 {
     .view-id-about {
       .views-row {
@@ -61,6 +63,9 @@
         p {
           padding-left: 40px;
           text-align: center;
+        }
+        .views-field-field-link-to-abo {
+          padding: 10px 0;
         }
       }
     }

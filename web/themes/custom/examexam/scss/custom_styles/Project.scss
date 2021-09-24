@@ -1,8 +1,4 @@
-.featured-bottom {
-  #bckg:first-child {
-      background: repeating-linear-gradient( -45deg, #dbdbdb, #ffffff 1px, #ffffff 1px, #dbdbdb 5px );
-  }
-}
+@include wrap(1, true);
 @use "sass:map";
 #block-views-block-projects2-block-1 {
   padding-bottom: 108px;
@@ -81,11 +77,25 @@
   }
   @include button(project-link, 75px, 30px, black, #ffffff);
 }
-@include line-responsive(#block-views-block-projects2-block-1);
-@media (max-width: 630px) {
+@include adaptive_cards(#block-views-block-projects2-block-1);
+@media (max-width: 1290px) {
   #block-views-block-projects2-block-1 {
     .views-col {
-      width: 100%;
+      margin-bottom: 60px;
     }
   }
 }
+@media (max-width: 670px) {
+  #block-views-block-projects2-block-1 {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 355px) {
+  #block-views-block-projects2-block-1 {
+    h2 {
+      margin-top: -16px;
+      font-size: 21px;
+    }
+  }
+}
+@include line-responsive(#block-views-block-projects2-block-1);

@@ -19,9 +19,9 @@
 ]
 %}
 {% if content %}
-  <div id = "bckg">
     <section{{ attributes.addClass(classes) }}>
-      {{ content }}
+      <div id = "bckg" class = "row">
+        {{ content }}
+      </div>
     </section>
-  </div>
 {% endif %}

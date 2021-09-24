@@ -5,7 +5,6 @@
     @return 'Roboto Condensed', sans-serif;
   }
 }
-
 .active_item {
   box-shadow: 0 7px 0 0 #2e9ad0;
   font-size: 1rem;
@@ -35,6 +34,9 @@ body {
   height: 700px;
   display: flex;
   justify-content: center;
+  #bckg {
+    margin: 0 auto;
+  }
 }
 #navbar-main {
   position: fixed;

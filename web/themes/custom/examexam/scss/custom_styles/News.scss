@@ -1,0 +1,238 @@
+@include wrap(3, true);
+#block-views-block-news2-block-1 {
+  @include line();
+  .content {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding-bottom: 76px;
+    .view-filters {
+      padding-left: 10px;
+    }
+  }
+  #edit-submit-news2 {
+    background-color: #67bfdc;
+    width: 65px;
+    border-color: #67bfdc;
+    &::after {
+      display: block;
+      content: "Apply";
+    }
+    svg {
+      display: none;
+    }
+  }
+  #line {
+    margin-top: -2.5rem;
+    &+h2 {
+      margin: -1.25rem auto 2.4rem auto;
+    }
+  }
+  .form-row {
+    display: flex;
+    fieldset {
+      max-width: 355px;
+      width: 100%;
+    }
+  }
+  .views-col {
+    padding: 0 20px;
+    & > div {
+      background-color: white;
+    }
+  }
+  .top_news_card {
+    display: flex;
+    padding: 19px 15px 13px 15px;
+    line-height: 9px;
+    .date_group_news {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .teammates_description {
+      border-left: 1px solid black;
+      margin-left: 26px;
+      padding: 0 25px 0 20px;
+      & > div {
+        font-size: 11px;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .party {
+          display: flex;
+          flex-wrap: wrap;
+          .group {
+            display: flex;
+            margin-left: 10px;
+            .news-role {
+              color: #cccccc;
+              margin-right: 8px;
+            }
+            .news-term-position {
+              margin-left: 2px;
+            }
+          }
+        }
+        .news-time-ago {
+          min-width: 80px;
+          font-size: 0.8125rem;
+          text-align: end;
+        }
+      }
+    }
+  }
+  .news-month {
+    color: #373645;
+    font-size: 2rem;
+  }
+  .news-day {
+    color: #6e9bca;
+    padding-top: 5px;
+    h2 {
+      margin: 0;
+      font-size: 3.125rem;
+    }
+  }
+  .news-year {
+    color: #dadada;
+    font-size: 15px;
+    margin-top: -5px;
+  }
+  .bot_news_card {
+    display: flex;
+    padding: 0 15px 19px 15px;
+    & > div:nth-child(2) {
+      border-left: 1px solid black;
+      margin-left: 1.6rem;
+      padding: 0 27px 0 15px;
+    }
+  }
+  .news-content {
+    line-height: 19px;
+    font-size: 14px;
+    text-align: justify;
+    padding-bottom: 14px;
+  }
+  .desc {
+    font-size: 25px;
+  }
+  .news-link {
+    float: right;
+  }
+  @include button(news-link, 100px, 30px, #373645, #ffffff);
+}
+@include line-responsive(#block-views-block-news2-block-1);
+@media (max-width: 1399px) {
+  #block-views-block-news2-block-1 {
+    .views-row {
+      height: 120%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  #block-views-block-news2-block-1 {
+    .views-row {
+      height: 100%;
+    }
+    .content {
+      padding-bottom: 0;
+    }
+  }
+}
+
+$sizes: ("m": 520px, "d": 520px, "y": 520px, "x": 550px, "xs":473px, "sm":550px, "md":670px);
+$bigs: ("m": 1rem ,"d": 1.4rem, "y":0.5rem, "sm":0.75rem, "md":0.9rem);
+@mixin media1($minmax, $media, $which, $h2: false) {
+  @if ($h2) {
+    @each $size, $resolution in $sizes {
+      @if $media == $size {
+        @media only screen and (#{$minmax}-width: $resolution) {
+          #block-views-block-news2-block-1 {
+            .#{$which} {
+              h2 {
+                @each $big, $res in $bigs {
+                  @if $media == $big {
+                    font-size: calc(#{$res} + 0.9vw);
+                    padding-bottom: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @each $size, $resolution in $sizes {
+      @if $media == $size {
+        @media only screen and (#{$minmax}-width: $resolution) {
+          #block-views-block-news2-block-1 {
+            .#{$which} {
+              @each $big, $res in $bigs {
+                @if $media == $big {
+                  font-size: calc(#{$res} + 0.9vw);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media1("max", "md", desc);
+@include media1("max", "sm", desc);
+@include media1("max", "xs", desc);
+@include media1("max", "x", news-content);
+@include media1("max", "m", news-month);
+@include media1("max", "d", news-day, true);
+@include media1("max", "y", news-year);
+
+@media (max-width: 670px) {
+  #block-views-block-news2-block-1 {
+    .top_news_card {
+      .teammates_description {
+        .wrapper {
+          .party {
+            flex-direction: column;
+            .group {
+              line-height: 14px;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              margin-top: 9px;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  #block-views-block-news2-block-1 {
+    .top_news_card {
+      .teammates_description {
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
+@media (max-width: 520px) {
+  #block-views-block-news2-block-1 {
+    .bot_news_card {
+      .col-1 {
+        display: none;
+      }
+      & > div:nth-child(2) {
+        margin-left: calc(10px + 0.9vw);
+        border-left: 0;
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+}
