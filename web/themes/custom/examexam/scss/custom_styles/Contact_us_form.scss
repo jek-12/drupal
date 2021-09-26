@@ -1,5 +1,4 @@
 .highlighted + #main-wrapper {
-
     .row {
       max-width: 970px;
       margin: 0 auto;
@@ -59,7 +58,7 @@
   }
 }
 @media (max-width: 980px) {
-  #main-wrapper {
+  .highlighted + #main-wrapper {
     .row {
       width: 100%;
       align-items: center;
@@ -73,21 +72,3 @@
     }
   }
 }
-
-//.block-field-blocknodectitle {
-//  & + #line {
-//    display: block;
-//    width: 100px;
-//    background: gray;
-//    height: 2px;
-//    margin: 40px auto 0 auto;
-//  }
-//}
-//
-//.content {
-//  position: relative;
-//  top: -40px;
-//}
-
-//    line-height: 16.5px;
-//}
