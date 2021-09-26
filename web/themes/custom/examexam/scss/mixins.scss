@@ -58,7 +58,8 @@
     @include size(240px, 100%);
     width: 240px;
     height: 100%;
-    padding: 28px 0 0 39px;
+    text-align: center;
+    padding-top: 1.75rem;
     h3 {
       font-family: fontik(true);
       text-transform: none;
